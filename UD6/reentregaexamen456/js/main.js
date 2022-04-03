@@ -7,11 +7,13 @@
 
         const colores = ["rojo", "amarillo", "verde"];
 
+        let divsColores;
+
         const init = function () {
+            divsColores = Array.from(document.querySelectorAll("div div"));
             rellenarP();
-            document.querySelectorAll("div div").forEach((elemento) => {
+            divsColores.forEach((elemento) => {
                 elemento.classList.add(colores[Math.floor(Math.random() * colores.length)]);
-                elemento.dataset.libre = false;
                 elemento.addEventListener("click", clickea);
             })
         }
@@ -24,7 +26,7 @@
         }
 
         const clickea = function () {
-            let divsColores = Array.from(document.querySelectorAll("div div"));
+            // let divsColores = Array.from(document.querySelectorAll("div div"));
             if (this.classList != "") {
                 this.innerText = this.classList;
                 this.classList.remove(this.classList);

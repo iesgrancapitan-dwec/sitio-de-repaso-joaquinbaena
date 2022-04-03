@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/manualparte1.js"></script>
+    <script src="js/manualparte2.js"></script>
+    <script src="js/manualparte3.js"></script>
+    <title>jquery del 1 al 3</title>
+    <style type="text/css">
+        .clasecss {
+            background-color: #ff8800;
+            font-weight: bold;
+        }
+
+        .rojo {
+            color: #cc0000;
+        }
+
+        .verde {
+            color: #00cc00;
+        }
+
+        .azul {
+            color: #0000cc;
+        }
+
+        .fondogris {
+            background-color: #cccccc;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Introducción</h1>
+    <div id="demo1">
+        <h2>Demo 1</h2>
+        <div id="capa1" style="padding: 10px; background-color: #ff8800">Haz clic en un botón</div>
+        <p>
+            <input type="button" value="Botón A">
+            <input type="button" value="Botón B">
+        </p>
+    </div>
+
+    <div id="demo2">
+        <h2>Demo 2</h2>
+        <div id="capa2" style="padding: 10px; background-color: #ff8800;">Pon el ratón encima de esta
+            capa</div>
+        <br>
+        <div id="mensaje" style="display: none;">Has puesto el ratón encima!! <br>(Ahora quítalo de la
+            capa)</div>
+    </div>
+
+    <div id="demo3">
+        <h2>Demo 3</h2>
+        <div id="capa3">
+            <a href="http://www.desarrolloweb.com">Ir a DesarrolloWeb.com</a>
+        </div>
+    </div>
+
+    <div id="demo4">
+        <h2>Demo 4</h2>
+        <div id="capa4">
+            Esta capa es independiente y voy a añadir y eliminar clases css sobre ella
+        </div>
+        <br>
+        <br>
+        <a href="http://www.desarrolloweb.com">Añadir y quitar clase en la capa de arriba</a>
+    </div>
+
+    <div id="demo5">
+        <h2>Demo 5</h2>
+        <form>
+            Nombre: <input type="text" name="nombre">
+            <br>
+            <input type="checkbox" name="mayor_edad" value="1" id="mayoria_edad"> Soy mayor de edad
+            <br>
+            <div id="formulariomayores" style="display: none;">
+                Dato para mayores de edad: <input type="text" name="mayores_edad">
+            </div>
+        </form>
+    </div>
+
+    <div id="demo6">
+        <h2>Demo 6</h2>
+        <div id="capaefectos" style="background-color: #cc7700; color:fff; padding:10px;">
+            Esto es una capa que nos servirá para hacer efectos!
+            <br>
+            <br>
+            Pongo este texto simplemente de prueba
+        </div>
+        <p>
+            <a href="#" id="ocultar">Ocultar la capa</a> |
+            <a href="#" id="mostrar">Mostrar la capa</a>
+        </p>
+    </div>
+
+    <h1>Core</h1>
+    <div id="demo7">
+        <h2>Demo 7</h2>
+        <div id="elem1">Este elemento se llama elem1</div>
+        <div id="elem2">Este otro elemento se llama elem2</div>
+    </div>
+
+    <div id="demo8">
+        <h2>Demo 8</h2>
+        <p><b>Párrafo</b>!!</p>
+        <p>Otro <b>párrafo</b></p>
+    </div>
+
+    <div id="demo9">
+        <h2>Demo 9</h2>
+        <p>Primer párrafo</p>
+        <p>Otro párrafo</p>
+        <p>Tecer párrafo</p>
+        <p>Uno más</p>
+        <p>y acabo...</p>
+    </div>
+
+    <div id="demo10">
+        <h2>Demo 10</h2>
+        <p>Esto es un párrafo normal</p>
+        <p class="mitexto">Esto es un párrado de la clase "mitexto"</p>
+        <div>Un div normal</div>
+        <div class="mitexto">Ahora un div de la clase "mitexto"</div>
+    </div>
+
+    <div id="demo11">
+        <h2>Demo 11</h2>
+        <div id="division">
+            En esta división (elemento id="division") voy a guardar datos con la función data y luego los voy a
+            leer
+        </div>
+        <br>
+        <form name="formul">
+            Escribe un valor a guardar, leer o eliminar:
+            <input type="text" name="valor" id="valor">
+            <br>
+            <input type="button" value="guardar dato" id="guardar">
+            <input type="button" value="leer dato" id="leer">
+            <input type="button" value="eliminar dato" id="eliminar">
+        </form>
+    </div>
+
+    <div id="demo12">
+        <h2>Demo 12</h2>
+        <h1>Selectores en jQuery</h1>
+        <p>En esta página hay varias etiquetas. Ahora con este formulario puedes escribir un selector, para
+            seleccionar algunas con jQuery, y luego pulsar el botón para ver qué elementos de la página has
+            seleccionado.</p>
+        <form>
+            Selector: <input type="Text" name="camposelector" id="camposelector">
+            <input type="button" id="boton" value="Ver qué elementos seleccionas">
+        </form>
+        <p id="p1" class="rojo">Este es un párrafo con id="p1" y class="rojo"</p>
+        <p id="p2" class="verde">Este es un párrafo con id="p2" y class="verde" y aquí <i>meto una
+                itálica</i></p>
+        <p id="p3" class="rojo fondogris">Este es un párrafo con id="p3" y class="rojo fondogris" (es decir,
+            este elemento tiene aplicadas las clases "rojo" y "fondogris"</p>
+        <p id="p4">Este es un párrafo con id="p4", sin class</p>
+        <p>Este es un párrafo sin id ni class</p>
+        <div id="div1">Esto es una división con id="div1"</div>
+        <div id="div2" class="rojo">Esto es una división con id="div2" y class="rojo" y aqui <b>meto una
+                negrita</b></div>
+        <div id="div3" class="verde fondogris">Esto es una división con id="div3" y class="verde
+            fondogris"</div>
+        <div>Esto es una división sin id ni class</div>
+        <div class="azul">Esto es una división sin id, con class="azul"</div>
+        <b>Esto es una etiqueta b</b>
+        <i>Esto es una etiqueta i</i>
+    </div>
+
+    <div id="demo13">
+        <h2>Demo 13</h2>
+        <p class="parraforojo">
+            <i>Hola</i> <b>esto</b> es un <b>párrafo</b> rojo <i>donde</i> he <b>puesto</b> unas <b>negritas</b>
+        </p>
+        <p class="parraforojo">Otro <b>con</b> clase class="parraforojo" <span class="unspan"><b>(esto está
+                    dentro de unspan B, no depende directamente -no child- del párrafo)</b></span></p>
+        <p>Hola <b>esto</b> es otro <b>párrafo </b>para <i>poner</i> otras <b>negritas</b></p>
+        <p>hola!!!</p>
+        <table border="1">
+            <tr>
+                <td><i>Tabla cualquiera</i></td>
+                <td>Esta tabla <b>no tiene</b> class de <b>CSS</b></td>
+            </tr>
+        </table>
+        <p id="miparrafo">Este es el párrafo con id="miparrafo"</p>
+        <table class="mitabla" border="1">
+            <tr>
+                <td colspan=2>Esta tabla tiene una <b>clase CSS</b></td>
+            </tr>
+            <tr>
+                <td><i>class="mitabla"</i></td>
+                <td class="mitd">Y este <b>td</b> le he puesto <i>class="mitd"</i> <span>Una cosa<span>otra
+                            cosa</span></span></td>
+            </tr>
+        </table>
+        <p><b>Párrafo</b> que tiene alguna <b>negrita</b> e <span class="algo"><i>itálica</i></span> para
+            seleccionar</p>
+        <div>
+            <div id="a1">hola</div>
+            <div id="a2">dos</div>
+            <div id="a3">3</div> <span>Cuatro (no es un div)???
+            </span>
+            <div id="a4" class="clase">Cuatro de verdad</div>
+        </div>
+        <ul>
+            <li>Elem 1</li>
+            <li class="elemlista">Elem 2</li>
+            <li>Elem 3</li>
+            <li>Elem 4</li>
+            <li class="elemlista">Elem 5</li>
+            <li class="elemlista">Elem 6</li>
+            <li>Elem 7</li>
+        </ul>
+    </div>
+</body>
+
+</html>
