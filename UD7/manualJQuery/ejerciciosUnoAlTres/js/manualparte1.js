@@ -2,7 +2,7 @@ $(function(){
     $("h1").css("backgroundColor","black")
     .css("color", "white");
 
-    $("h2").css("backgroundColor","lightgrey");
+    $("h2").css("backgroundColor","lightblue");
 
     // Demo 1
     $("input[type=button]").click(function(e){
@@ -29,6 +29,9 @@ $(function(){
     })
     .mouseout(function(){
         $("#capa4").removeClass("clasecss");
+    })
+    .click(function(e){
+        e.preventDefault();
     });
 
     // Demo 5

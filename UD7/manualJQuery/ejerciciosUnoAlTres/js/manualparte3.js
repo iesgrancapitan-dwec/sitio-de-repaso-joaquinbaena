@@ -1,7 +1,7 @@
 $(function(){
     // Demo 12
     $("#boton").click(function(evento){
-        let selectorEscrito = $("#camposelector").prop("value");
+        let selectorEscrito = $("#camposelector").val();
         if (selectorEscrito==""){
             alert("Escribe algo en el campo de texto")
         }else{

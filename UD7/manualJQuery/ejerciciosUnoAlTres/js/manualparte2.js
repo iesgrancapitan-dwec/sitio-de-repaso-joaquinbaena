@@ -1,23 +1,15 @@
 $(function(){
     // Demo 7
-    const $elem1 = $("#elem1");
-    $elem1.css("background-color", "#ff9999");
-    const $divs = $("#demo7 div");
-    $divs.css("font-size", "32pt");
+    $("#elem1").css("background-color", "#ff9999");
+    $("#demo7 div").css("font-size", "32pt");
 
     // Demo 8
-    const $parrafos = $("#demo8 p");
-    $parrafos.css("background-color", "#ff8833");
-    const $negrita = $("b");
-    $negrita.css("color", "#fff");
+    $("#demo8 p").css("background-color", "#ff8833");
+    $("b").css("color", "#fff");
 
     // Demo 9
     $("#demo9 p").each(function(i){
-        if(i%2==0){
-            $(this).css("background-color", "#eee");
-        }else{
-            $(this).css("background-color", "#ccc");
-        }
+        (i%2==0) ? $(this).css("background-color", "#eee") : $(this).css("background-color", "#ccc");
     });
 
     // Demo 10
