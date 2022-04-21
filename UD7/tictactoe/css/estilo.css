@@ -1,0 +1,36 @@
+.vacio{
+    background-color: lightgrey;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+.equis{
+    background-color: lightgrey;
+    width: 100px;
+    height: 100px;
+    color: red;
+    font-size: 90px;
+    text-align: center;
+    vertical-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: default;
+    user-select: none;
+}
+
+.circulo{
+    background-color: lightgrey;
+    width: 100px;
+    height: 100px;
+    color: blue;
+    font-size: 90px;
+    text-align: center;
+    vertical-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: default;
+    user-select: none;
+}
+
+span{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
