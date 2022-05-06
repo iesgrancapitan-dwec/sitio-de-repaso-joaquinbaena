@@ -8,8 +8,4 @@ $(function () {
     $("#aparece").click(function () {
         $("#ejemplo").aparece("slideDown");
     })
-
-    $('#modLista').click(function () {
-        $('li').lista();
-    })
 });
