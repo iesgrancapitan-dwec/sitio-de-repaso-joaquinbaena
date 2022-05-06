@@ -37,4 +37,17 @@
                 return this.slideDown();
         }
     };
+
+    jQuery.fn.lista = function () {
+        this.filter('li').each(function (index) {
+            switch (index % 3) {
+                case 0:
+                    return $(this).css('background-color', 'red');
+                case 1:
+                    return $(this).css('background-color', 'green');
+                case 2:
+                    return $(this).css('background-color', 'blue');
+            }
+        })
+    };
 })(jQuery);
