@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", _ => {
     });
     
     botones[11].addEventListener("click", _ => {
-        secciones[0].style.backgroundColor = document.getElementById("genderm").value;
+        secciones[1].style.backgroundColor = document.querySelector("input[name='fondo']:checked").value;
     });
 
 })
