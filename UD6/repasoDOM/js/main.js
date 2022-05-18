@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", _ => {
     const inputText = document.querySelectorAll('input[type=text]');
     const botones = document.querySelectorAll('button');
     const secciones = document.querySelectorAll('section');
-    console.log(botones);
+    const h2 = document.querySelector('h2');
 
     
     const anadirAlFinal = function(){
@@ -21,13 +21,13 @@ document.addEventListener("DOMContentLoaded", _ => {
         }
         
     const eliminarAlFinal = function(){
-    (this.textContent.includes('uno')) ? secciones[0].removeChild(secciones[0].lastChild) 
-        : secciones[1].removeChild(secciones[1].lastChild);
+    (this.textContent.includes('uno')) ? secciones[0].lastChild?.remove()
+        : secciones[1].lastChild?.remove();
     }
 
     const eliminarAlPrincipio = function(){
-    (this.textContent.includes('uno')) ? secciones[0].removeChild(secciones[0].firstChild) 
-        : secciones[1].removeChild(secciones[1].firstChild);
+    (this.textContent.includes('uno')) ? secciones[0].firstChild?.remove()
+        : secciones[1].firstChild?.remove();
     }
 
     botones[0].addEventListener("click", anadirAlFinal);
@@ -49,11 +49,7 @@ document.addEventListener("DOMContentLoaded", _ => {
     });
     
     botones[9].addEventListener("click", function(){
-        try{
-            document.querySelector("#uno").remove();
-        }catch (e){
-            console.log("no existe la seccion uno");
-        }
+        document.querySelector("#uno")?.remove();
     });
     
     botones[10].addEventListener("click", _ => {
@@ -64,4 +60,13 @@ document.addEventListener("DOMContentLoaded", _ => {
         secciones[1].style.backgroundColor = document.querySelector("input[name='fondo']:checked").value;
     });
 
+    botones[12].addEventListener("click", function() {
+        h2.classList.toggle(this.nextSibling.value);
+    });
+
+    document.querySelectorAll('input[type=checkbox]').forEach(element => {
+        element.addEventListener("change", function() {
+            this.checked ? h2.classList.add(this.value) : h2.classList.remove(this.value);
+        });
+    });
 })
